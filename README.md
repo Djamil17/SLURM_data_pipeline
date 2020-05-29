@@ -7,7 +7,7 @@ Set up of Slurm Cluster using [Google Cloud Platform](https://cloud.google.com/b
 ![Slurm Image](https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/slurm.max-400x400.png)
 
 
-# Contents 
+## Contents 
 - [Motivation](#Motivation)
 - [Slurm](#Slurm)
 - [Slurm on Google Cloud Platform](#Slurm-on-Google-Cloud-Platform)
