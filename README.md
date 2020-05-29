@@ -1,8 +1,4 @@
-
-![Slurm Image]("https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/slurm.max-400x400.png")
-
-![NIH Logo]("https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/nih_logo.png")
-
+![NIH]("https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/nih_logo.png")
 
 # SLURM_data_pipeline
 Documentation for standing up and using vm clusters with slurm management 
@@ -14,7 +10,7 @@ Documentation for standing up and using vm clusters with slurm management
   * [Definition](#Definition)
   * [1:N](#Definition)
   * [Hybrid](#Definition)
-- [Using the Documentation](#Machine-Learning)
+- [Using the Documentation](#Using-Documentation)
   * [Definition](#Definition)
     + [Supervised-Unsupervised-Learning](#Supervised-Unsupervised-Learning)
     + [Evaluating-Models](#Evaluating-Models)
@@ -28,5 +24,13 @@ Documentation for standing up and using vm clusters with slurm management
 
 ## Slurm
 
+![Slurm Image]("https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/slurm.max-400x400.png")
 
-## Slurm
+
+## Slurm GCP
+
+
+## Deployment Models
+
+
+## How to Use the Documentation 
