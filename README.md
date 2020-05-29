@@ -6,7 +6,7 @@ Documentation for standing up and using vm clusters with slurm management
 - [Motivation](#Motivation)
 - [Slurm](#Slurm)
 - [Slurm on Google Cloud Platform](#Slurm-on-Google-Cloud-Platform)
-- [Deployement Models](#Deployement Models)
+- [Deployement Models](#Deployement-Models)
   * [Definition](#Definition)
   * [1:N](#Definition)
   * [Hybrid](#Definition)
