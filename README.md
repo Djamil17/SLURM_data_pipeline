@@ -1,5 +1,5 @@
 
-![Slurm]("https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/slurm.max-400x400.png")
+![Slurm_image]("https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/slurm.max-400x400.png")
 
 ![NIH_Logo]("https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/nih_logo.png")
 
