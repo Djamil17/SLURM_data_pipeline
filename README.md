@@ -1,4 +1,4 @@
-![NIH](https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/nih_logo.png)
+![NIH](https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/nih-logo.png)
 
 # SLURM_data_pipeline
 Documentation for standing up and using vm clusters with slurm management 
@@ -24,7 +24,7 @@ Documentation for standing up and using vm clusters with slurm management
 
 ## Slurm
 
-![Slurm Image]("https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/slurm.max-400x400.png")
+![Slurm Image](https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/slurm.max-400x400.png)
 
 
 ## Slurm GCP
