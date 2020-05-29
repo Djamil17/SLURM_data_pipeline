@@ -1,6 +1,6 @@
 # SLURM_data_pipeline
 
-Set up of Slurm Cluster using [Google Cloud Platform](https://cloud.google.com/blog/products/compute/hpc-made-easy-announcing-new-features-for-slurm-on-gcp). 
+Set up of Slurm Cluster using [Google Cloud Platform](https://cloud.google.com/blog/products/compute/hpc-made-easy-announcing-new-features-for-slurm-on-gcp). Stand-up by itself or integrate VM cluster with Biowulf.
 
 ![NIH](https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/nih-logo.png)
 
@@ -17,6 +17,12 @@ Set up of Slurm Cluster using [Google Cloud Platform](https://cloud.google.com/b
 
 ## Motivation and History 
 
+Scientific computation requires High-Performance Computing. This has often meant massive investment in *on-premise supercomputers".*** The NIH HPC group plans, manages and supports high-performance computing systems specifically for the intramural NIH community. The NIH has a supercomputing system which uses Slurm for cluster management, scheduling, and resource allocation. Slurm is a default in the HPC community. 
+
+In recent years, for a number of reasons, the HPC community is becoming more interested in leveraging cloud services. This has often meant, not so much the elimination of costly hardware, software, development, and maintenance, but a supplementation of the on-premise super computer with cloud services (virtual machines and clusters). 
+
+Therefore integrating slurm engine VM clusters with on-premise supercomputers is a major advance for scientific computation.  
+
 ## Slurm
 
 ![Slurm Image](https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/slurm.max-400x400.png)
@@ -25,11 +31,11 @@ Slurm is an open source, fault-tolerant, and highly scalable cluster management 
 
 ## Slurm GCP
 
-## History 
-
 Scripts and documentation developed from the following [Slurm-Git](https://github.com/SchedMD/slurm-gcp). 
 
 Also, [slurm codeland](https://codelabs.developers.google.com/codelabs/hpc-slurm-on-gcp/#0). 
+
+## History 
 
 ## Deployment Models
 
