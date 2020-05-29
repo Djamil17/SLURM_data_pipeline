@@ -1,4 +1,4 @@
-[NIH]("pics/nih_logo.png?raw=true")
+[NIH]("../pics/nih_logo.png?raw=true")
 
 # SLURM_data_pipeline
 Documentation for standing up and using vm clusters with slurm management 
