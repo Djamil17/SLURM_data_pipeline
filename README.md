@@ -1,7 +1,8 @@
 ![NIH](https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/nih-logo.png)
 
 # SLURM_data_pipeline
-Documentation for standing up and using vm clusters with slurm management 
+
+Set up of Slurm Cluster using [Google Cloud Platform](https://cloud.google.com/blog/products/compute/hpc-made-easy-announcing-new-features-for-slurm-on-gcp). 
 
 - [Motivation](#Motivation)
 - [Slurm](#Slurm)
@@ -11,13 +12,7 @@ Documentation for standing up and using vm clusters with slurm management
   * [1:N](#Definition)
   * [Hybrid](#Definition)
 - [Using the Documentation](#Using-Documentation)
-  * [Definition](#Definition)
-    + [Supervised-Unsupervised-Learning](#Supervised-Unsupervised-Learning)
-    + [Evaluating-Models](#Evaluating-Models)
-    + [Quality-of-Fit](#Quality-of-Fit)
-    + [Over-Under-Fitting](#Over-Under-Fitting)
-    + [Bias-Variance-Tradeoff](#Bias-Variance-Tradeoff)
-    + [Classification Setting](#Classification-Setting)
+
 
 ## Motivation
 
@@ -27,7 +22,13 @@ Documentation for standing up and using vm clusters with slurm management
 ![Slurm Image](https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/slurm.max-400x400.png)
 
 
+[slurm codeland](https://codelabs.developers.google.com/codelabs/hpc-slurm-on-gcp/#0)
+
+
+
 ## Slurm GCP
+
+The Following
 
 
 ## Deployment Models
