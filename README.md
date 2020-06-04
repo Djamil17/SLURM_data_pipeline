@@ -68,6 +68,67 @@ You may want to review ```tf.vars``` files [here](https://learn.hashicorp.com/te
 
 #### What and How to Edit basic.vars 
 
+* cluster_name: Name of the Slurm cluster
+* zone: Google Cloud zone which will contain the controller and login instances of this cluster - More Info
+* vpc_net: Virtual Private Cloud network to deploy the Slurm cluster into
+* vpc_subnet: Virtual Private Cloud subnetwork to deploy the Slurm cluster into
+* Shared_vpc_host_project: Shared VPC network to deploy the Slurm cluster into
+* controller_machine_type: Controller node instance type
+* controller_disk_type: Type of the controller instance boot disk
+* controller_disk_size_gb: Size of a controller instance boot disk
+* controller_labels: Labels to attach to the controller instance
+* controller_service_account: Service account to be used on the controller instance
+* controller_scopes: Access scope of the controller instance
+* cloudsql: Google CloudSQL server to use as the Slurm database instead of hosting a database on the controller instance
+* server_ip: CloudSQL server IP
+* user: CloudSQL username
+* password: CloudSQL password
+* db_name: CloudSQL database name
+* login_machine_type: Login (SSH-accessible) node instance type
+* login_disk_type: Type of the login instance boot disk
+* login_disk_size_gb: Size of the login instance boot disk
+* login_node_count: Number of login nodes to create
+* login_node_service_account: Service account to be used on the login instance(s)
+* login_node_scopes: Access scope of the login instance
+* network_storage: Network storage to mount on all nodes. Can be repeated for additional mounts.
+* server_ip: Storage server IP
+* remote_mount: Storage mount name (filesystem name)
+* local_mount: Local mount directory
+* fs_type: Filesystem type (NFS, CIFS, Lustre, GCSFuse installed automatically)
+* login_network_storage: Network storage to mount on login and controller nodes. NFS, CIFS, Lustre, and GCSFuse will be  installed automatically. Can be repeated for additional mounts.
+* server_ip: Storage server IP
+* remote_mount: Storage mount name (filesystem name)
+* local_mount: Local mount directory
+* fs_type: Filesystem type (NFS, CIFS, Lustre, GCSFuse installed automatically)
+* compute_image_machine_type: Compute image node machine type
+* compute_image_disk_type: Compute image disk type
+* compute_image_disk_size_gb: Compute image disk size in GB
+* compute_image_labels: Label(s) to apply to the compute image instance
+* external_compute_ips: Assign external IPs for each compute node?
+* private_google_access: Is Private Google Access enabled? More info.
+* controller_secondary_disk: Add a secondary disk for NFS server storage?
+* controller_secondary_disk_type: Type of the controller secondary disk
+* controller_secondary_disk_size_gb: Size of the controller secondary disk
+* compute_node_service_account: Service account to be used on the compute instance(s)
+* compute_node_scopes: Access scope of the compute instances
+* suspend_time: Time to wait after a node is idle before suspending the node
+* slurm_version: Specify a version of Slurm to install on the cluster. Defaults to the latest release. See link for versions.
+* ompi_version: Specify a version of OpenMPI to install on the cluster. Defaults to the latest release. See link for versions.
+* partitions: Slurm partition configuration. Can be repeated for additional partitions.
+* name: Partition name
+* machine_type: Compute node(s) instance type
+* static_node_count: Number of always-on compute nodes
+* max_node_count: Maximum number of total compute nodes allowed - 64K maximum
+* zone: Google Cloud zone which will contain the resources of this partition - More Info
+* cpu_platform: Minimum CPU platform required for all compute nodes
+* preemptible_bursting: Is preemptible bursting enabled?
+* compute_disk_type: Type of a compute instance boot disk (pd-standard, pd-ssd)
+* compute_disk_size_gb: Size of a compute instance boot disk
+* compute_image_family: Specify an alternate image family source, instead of building one from Google's CentOS image. Slurm must be installed on your image.
+* vpc_subnet: Virtual Private Cloud subnetwork to deploy the Slurm partition into
+* gpu_type: GPU type to attach to the partition's instances
+* gpu_count: Number of GPUs to attach to each instance in the partition
+
 ### Image-based Scaling
    The deployment will create a <cluster_name>-compute-\#-image instance, where
    \# is the index in the array of partitions, for each partition that is a base
