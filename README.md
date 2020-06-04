@@ -36,11 +36,7 @@ Scripts and documentation developed from the following [Slurm-Git](https://githu
 
 Also, [slurm codeland](https://codelabs.developers.google.com/codelabs/hpc-slurm-on-gcp/#0). 
 
-### History 
-
 ### Deployment Models
-
-### How to Use the Documentation 
 
 ### Install using Terraform (Beta)
 
@@ -67,6 +63,10 @@ Steps:
    **NOTE:** If additional resources (instances, networks) are created other
    than the ones created from the default deployment then they will need to be
    destroyed before deployment can be removed.
+   
+You may want to review ```tf.vars``` files [here](https://learn.hashicorp.com/terraform/gcp/variables).
+
+#### What and How to Edit basic.vars 
 
 ### Image-based Scaling
    The deployment will create a <cluster_name>-compute-\#-image instance, where
@@ -99,6 +99,8 @@ Steps:
    the scripts directory that can be used to add custom installations for the
    given instance type. The files will be executed during startup of the
    instance types.
+   
+#### How to 
 
 ### Accessing Compute Nodes Directly
 
