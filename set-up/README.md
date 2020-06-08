@@ -262,7 +262,7 @@ srun hostname
 sleep 60
 ```
 
-Save and exit the code editor by pressing **escape** and typing ```:wq```.
+Save and exit the code editor by pressing **escape** and typing ```:wq!```.
 
 This script defines the Slurm batch execution environment and tasks. First, the execution environment is defined as bash. Next, the script defines the Slurm options first with the "#SBATCH" lines. The job name is defined as "hostname_sleep_sample". The output file is set as "output_%j.txt" where %j is substituted for the Job ID according to the Slurm Filename Patterns.
 
@@ -277,8 +277,10 @@ Execute the sbatch script using the sbatch command line:
 ```
 sbatch hostname_batch
 ```
+You will get 
 
-Running sbatch will return a Job ID for the scheduled job, for example:
+```Submitted batch job 2
+```
 
 We can use the Job ID returned by the sbatch command to track and manage the job execution and resources. Execute the following command to view the Slurm job queue:
 
@@ -303,12 +305,11 @@ This will show the nodes listed in squeue in the "mix#" state, meaning the nodes
 
 ```
 PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
-debug*       up   infinite      8  idle~ g1-compute-0-[2-9]
-debug*       up   infinite      2  mix#  g1-compute-0-[0-1]
+debug*       up   infinite      8  idle~ cluster-example-compute-0-[2-9]
+debug*       up   infinite      2  mix#  cluster-example-compute-0-[0-1]
 ```
 
 You can also check the VM instances section in Google Cloud Console to view the newly provisioned nodes. It will take a few minutes to spin up the nodes and get Slurm installed before the job is allocated to the newly allocated nodes. Your VM instances list will soon resemble the following:
 
-
-
+![vm_instances]()
 
