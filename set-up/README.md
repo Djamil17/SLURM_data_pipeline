@@ -319,9 +319,77 @@ The output file out_%j.txt will have been written to your NFS-shared /home folde
 compute-example-compute-0-0
 compute-example-compute-0-1
 ```
-Great work, you've run a job and scaled up your Slurm cluster!
+Great work, you've run a job and scaled up your Slurm cluster! If you check your VMs, you will see there are less. That is because it scaled down. 
 
 ### Run an MPI job
 
+MPI is a standard for writing message-passing parrallel programs. Now let's run the "Hello-World" of MPI across our nodes. While logged in to ```cloud-example-login0```, use wget to download an MPI program written in the C programming language:
+
+```bash
+wget https://raw.githubusercontent.com/open-mpi/ompi/master/examples/hello_c.c
+```
+We'll use the "mpicc" tool to compile the MPI C code. Execute the following command on cloud-example-login0:
+
+```bash
+mpicc hello_c.c -o hello_c
+```
+
+Next, use your preferred text editor to create a new file "helloworld_batch":
+
+```bash
+vi helloworld_batch
+```
+
+Type i to enter the vi insert mode.
+
+Copy and paste the following text into the file to create a simple sbatch script:
+
+```bash
+#!/bin/bash
+#
+#SBATCH --job-name=hello_world
+#SBATCH --output=hello_world_%j.txt
+#
+#SBATCH --nodes=2
+
+srun hello_c
+```
+
+Save and exit the code editor by pressing escape and typing ":wq!" without quotes.
+
+Then execute the sbatch script using the ```sbatch``` command line:
+
+```
+sbatch helloworld_batch
+```
+
+Running sbatch will return a Job ID for the scheduled job, for example:
+
+```
+Submitted batch job 3
+```
+
+This will run the hostname command across 2 nodes, with one task per node, as well as printing the output to the hello_world_3.txt file.
+
+```
+Monitor squeue until the job has completed and no longer listed:
+```
+
+squeue
+Once completed open or cat the latest output file (typically out_3.txt) and confirm it ran on cluster-example-compute-0-[0-1]:
+
+```
+Hello, world, I am 0 of 2, (Open MPI v3.1.7a1, package: Open MPI root@g1-controller Distribution, ident: 3.1.7a1, repo rev: v3.1.6-8-g6e2efd3, Unreleased developer copy, 141)
+
+Hello, world, I am 1 of 2, (Open MPI v3.1.7a1, package: Open MPI root@g1-controller Distribution, ident: 3.1.7a1, repo rev: v3.1.6-8-g6e2efd3, Unreleased developer copy, 141)
+```
+
+After being idle for 5 minutes (configurable with the main.tf suspend_time field, or slurm.conf's SuspendTime field) the dynamically provisioned compute nodes will be de-allocated to release resources. You can validate this by running sinfo periodically and observing the cluster size fall back to 0:
+
+JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+    2     debug hello_wo username  R       0:10      2 cluster-example-compute-0-[0-1]
+    
+Try spinning up more instances, up to your Quota allowed in the region you deployed the cluster in, and running different MPI applications.
 
 ### Running Python job 
+
