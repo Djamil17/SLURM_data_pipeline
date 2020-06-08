@@ -1,3 +1,5 @@
+![NIH](https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/nih-logo.png)
+
 ## Contents 
 - [Setup Requisites](#Setup-Requisites)
 - [Deploying Project](#Project)
