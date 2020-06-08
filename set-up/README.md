@@ -311,5 +311,5 @@ debug*       up   infinite      2  mix#  cluster-example-compute-0-[0-1]
 
 You can also check the VM instances section in Google Cloud Console to view the newly provisioned nodes. It will take a few minutes to spin up the nodes and get Slurm installed before the job is allocated to the newly allocated nodes. Your VM instances list will soon resemble the following:
 
-![vm_instances]()
+![vm_instances](https://github.com/Djamil17/strides-slurm-gcp/blob/master/set-up/Screen%20Shot%202020-06-08%20at%203.36.07%20PM.png)
 
