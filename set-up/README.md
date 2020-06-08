@@ -122,7 +122,8 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 * 1. cd to tf/examples/basic
 * 2. Edit the basic.tfvars file and specify the required values
-* 3. Deploy the VPC with the commands: 
+* 3. Optionally specify packages and program to download
+* 4. Deploy the VPC with the commands: 
 
 ```bash
 $ terraform apply -var-file=basic.tfvars
@@ -143,6 +144,62 @@ Under VM instances review the three virtual machine instances that have been cre
 * cluster-example-login0
 
 The cluster-example-compute-0-image instance is only online for a short time to create the compute image used by the partition's auto-scaling nodes, and then it is shut down. If you'd like to make updates to the image used by compute nodes you can start this instance, make changes, and make another image in the Slurm cluster's image family to update that partition's image.
+
+### Custom Software Installation
+
+In scripts there is a script called ```startup.sh```, if you want to add a package add it to one of these :
+
+```bash
+
+PACKAGES=(
+        'bind-utils'
+        'environment-modules'
+        'epel-release'
+        'gcc'
+        'git'
+        'hwloc'
+        'hwloc-devel'
+        'libibmad'
+        'libibumad'
+        'lua'
+        'lua-devel'
+        'man2html'
+        'mariadb'
+        'mariadb-devel'
+        'mariadb-server'
+        'munge'
+        'munge-devel'
+        'munge-libs'
+        'ncurses-devel'
+        'nfs-utils'
+        'numactl'
+        'numactl-devel'
+        'openssl-devel'
+        'pam-devel'
+        'perl-ExtUtils-MakeMaker'
+        'python3'
+        'python3-pip'
+        'readline-devel'
+        'rpm-build'
+        'rrdtool-devel'
+        'vim'
+        'wget'
+        'tmux'
+        'pdsh'
+        'openmpi'
+        'yum-utils'
+    )
+
+PY_PACKAGES=(
+        'pyyaml'
+        'requests'
+        'google-api-python-client'
+    )
+
+
+```
+
+Do this before deploying the cluster. 
 
 ### Login to Slurm 
 
@@ -203,7 +260,7 @@ To exit the VM.
 Log back in through ssh: 
 
 ```bash
-gcloud compute ssh g1-login0 --zone=<ZONE>
+gcloud compute ssh cloud-example-login0 --zone=<ZONE>
 ```
 
 Congrats! You are logged into your slurm login-node. 
