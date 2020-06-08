@@ -47,9 +47,11 @@ installed on your computer or use the GCP
 [Cloud Shell](https://cloud.google.com/shell/).
 
 Steps:
-1. cd to tf/examples/basic
+1. enter the GCP shell
+2. enter the project you want to build under
+2. cd to tf/examples/basic directory 
 2. Edit the `basic.tfvars` file and specify the required values
-3. Deploy the cluster
+3. Deploy the cluster by hitting
    ```
    $ terraform init
    $ terraform apply -var-file=basic.tfvars
@@ -64,7 +66,7 @@ Steps:
    than the ones created from the default deployment then they will need to be
    destroyed before deployment can be removed.
    
-You may want to review ```tf.vars``` files [here](https://learn.hashicorp.com/terraform/gcp/variables).
+You may want to review ```tf.vars``` files [here](https://learn.hashicorp.com/terraform/gcp/variables). For a more thorough walk-through, consult the [set-up guide].
 
 #### What and How to Edit basic.vars 
 
