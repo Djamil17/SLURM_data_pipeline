@@ -33,14 +33,14 @@ Wait a minute or so for the shell to initialize , the result should look somethi
 
 Now you want to connect to the desired project. If you are not so already you can change it with the following:
 
-```bash
+```Bash
 
 $ gcloud config set project <PROJECT_ID>
 
 ````
 The command output is :
 
-```bash
+```Bash
 
 Updated property [core/project].
 
@@ -49,7 +49,7 @@ Updated property [core/project].
 #### Download the Slurm Deployment Configuration
 In the Cloud Shell session, execute the following command to clone (download) the Git repository that contains the Slurm for Google Cloud Platform deployment-manager files:
 
-```bash
+```Bash
 git clone https://github.com/Djamil17/slurm-gcp.git
 ```
 
