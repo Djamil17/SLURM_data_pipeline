@@ -448,5 +448,49 @@ JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
     
 Try spinning up more instances, up to your Quota allowed in the region you deployed the cluster in, and running different MPI applications.
 
-### Running Python job 
+### Running Python job  
 
+First, git the following repo :
+
+```bash
+
+git clone https://github.com/Djamil17/strides-slurm-gcp.git
+```
+
+Cd into strides-slurm-gcp and then test/ . Now create a sbatch script as such  :
+
+```vi hpc.quantile-normalization.bat```
+
+Hit i to enter insert mode and copy paste the following.
+
+```sh
+#! /bin/bash -l
+#SBATCH -J quantile-normalization
+#SBATCH -o quantile-normalization.out
+#SBATCH -n 2
+#SBATCH -t 04:00:00
+
+# you may not place bash commands before the last SBATCH directive
+
+# define and create a unique scratch directory
+SCRATCH_DIRECTORY=/global/work/${USER}/python-example/${SLURM_JOBID}
+mkdir -p ${SCRATCH_DIRECTORY}
+cd ${SCRATCH_DIRECTORY}
+
+cp ${SLURM_SUBMIT_DIR}/test.py ${SCRATCH_DIRECTORY}
+
+# each job will see a different ${SLURM_ARRAY_TASK_ID}
+python3 quantile_normalization.py 
+
+# after the job is done we copy our output back to $SLURM_SUBMIT_DIR
+cp quantile-normalization.out ${SLURM_SUBMIT_DIR}
+
+# we step out of the scratch directory and remove it
+cd ${SLURM_SUBMIT_DIR}
+rm -rf ${SCRATCH_DIRECTORY}
+
+# happy end
+exit 0
+```
+
+Then hit **esc** following by ```:wq!```. 
