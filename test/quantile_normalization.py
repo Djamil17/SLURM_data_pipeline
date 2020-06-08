@@ -1,10 +1,12 @@
+#!/usr/bin/python3
 
+import sys 
 import numpy as np 
 import pandas as pd
 
 # Import TCGA melanoma data 
 ## Rna read data
-file='test/data/counts.txt'
+file='test/data/{}.txt'.format(argv[1])
 with open(file, 'rt') as f: 
     read_counts=pd.read_csv(f,index_col=0)
 
@@ -50,6 +52,7 @@ def quantile_norm_log(x):
 
 
 log_counts_normalized=quantile_norm_log(counts)
-print(log_couts_normalized)
+print("The normalized log counts of the mRNA reads is, log_counts_normalized)
+print("The normalized log is a feature matrix with the following dimensions:",log_counts_normalized.shape)
 
 
