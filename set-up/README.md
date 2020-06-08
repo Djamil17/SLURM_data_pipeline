@@ -19,8 +19,6 @@ You will need the following to deploy a Slurm cluster:
 * 1. **slurm-gcp git** 
 * 2. **VPC** 
 
-## Steps :ladder:
-
 #### Enter and Configure GCP Shell
 
 First, enter the shell 
