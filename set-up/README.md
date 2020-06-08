@@ -313,3 +313,17 @@ You can also check the VM instances section in Google Cloud Console to view the 
 
 ![vm_instances](https://github.com/Djamil17/strides-slurm-gcp/blob/master/set-up/Screen%20Shot%202020-06-08%20at%203.36.07%20PM.png)
 
+Once a job is complete, it will no longer be listed in squeue, and the "alloc" nodes in sinfo will return to the "idle" state. Run "squeue" periodically until the job is completed, after a minute or two.
+
+The output file out_%j.txt will have been written to your NFS-shared /home folder, and will contain the hostnames. Open or cat the output file (typically out_2.txt), it contents of the output file will contain:
+
+```bash 
+compute-example-compute-0-0
+compute-example-compute-0-1
+```
+Great work, you've run a job and scaled up your Slurm cluster!
+
+### Run an MPI job
+
+
+### Running Python job 
