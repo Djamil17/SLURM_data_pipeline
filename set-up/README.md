@@ -25,11 +25,11 @@ First, enter the shell
 
 While Google Cloud can be operated remotely from your laptop, we will be using Google Cloud Shell, a command line environment running in the Cloud. To access it look at the right-corner toolbar of the GCP GUI, then click the button , which is pointed out by a red box here . 
 
-![shell button]("https://lh3.googleusercontent.com/SEkKuha3_UnmalYcbfuJvV3IyW84QkhXC6moHxSiuu01Amew60AgAxekonf8MKVkWu_-7LqQ3jvrdjdUrL3oFG9IUgYuB1f5p0OYRONpwtmogd0OMto2FGIRSuzaSCFFeWjulWhT")
+[shell button]("https://lh3.googleusercontent.com/SEkKuha3_UnmalYcbfuJvV3IyW84QkhXC6moHxSiuu01Amew60AgAxekonf8MKVkWu_-7LqQ3jvrdjdUrL3oFG9IUgYuB1f5p0OYRONpwtmogd0OMto2FGIRSuzaSCFFeWjulWhT")
 
 Wait a minute or so for the shell to initialize , the result should look something like: 
 
-![shell_screen]("https://lh4.googleusercontent.com/QkHNPQKihCmsREufnwE2sBS1sKWXi2vUsKdXA6ijCqEsLwQXK2ngbhJUEda87HGKjh9L1SXiz2FIciMqBAk35v6MVVsTsXQTCehR2-bxAxpjDBbJYxJWlwqAMOJw1uc3QFCvfFqQ")
+[shell_screen]("https://lh4.googleusercontent.com/QkHNPQKihCmsREufnwE2sBS1sKWXi2vUsKdXA6ijCqEsLwQXK2ngbhJUEda87HGKjh9L1SXiz2FIciMqBAk35v6MVVsTsXQTCehR2-bxAxpjDBbJYxJWlwqAMOJw1uc3QFCvfFqQ")
 
 Now you want to connect to the desired project. If you are not so already you can change it with the following:
 
