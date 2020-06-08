@@ -1,6 +1,6 @@
 # SLURM_data_pipeline
 
-Set up of Slurm Cluster using [Google Cloud Platform](https://cloud.google.com/blog/products/compute/hpc-made-easy-announcing-new-features-for-slurm-on-gcp). Stand-up by itself or integrate VM cluster with Biowulf.
+Set up of Slurm Cluster using [Google Cloud Platform](https://cloud.google.com/blog/products/compute/hpc-made-easy-announcing-new-features-for-slurm-on-gcp). Stand-up by itself or integrate VM cluster with Biowulf. The method is agnostic to the data-pipeline that is run. 
 
 ![NIH](https://github.com/Djamil17/SLURM_data_pipeline/blob/master/pics/nih-logo.png)
 
